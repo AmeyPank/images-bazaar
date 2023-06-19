@@ -1,18 +1,21 @@
 // ce9pkQKHcCd8IAJ7RHgMPEElBMiruDzwXQniCw56E-Qt
 
 
-import React, {useState} from "react";
-import SearchImages from "./Components/SearchImages";
-import DisplayImages from "./Components/DisplayImages";
+import React, { useState } from "react";
+import SearchImages from "./Components/SearchImages/SearchImages";
+import DisplayImages from "./Components/DisplayImages/DisplayImages";
 import "./App.css"
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 function App() {
   const [images, setImages] = useState([]);
 
   return (
     <div className="App">
-        <h1>ImagesBazaar</h1>
-        <SearchImages addImages ={setImages}/>
-        <DisplayImages images={images} />
+      <Header />
+      <SearchImages addImages={setImages} />
+      <DisplayImages images={images} />
+      <Footer />
     </div>
   );
 }
