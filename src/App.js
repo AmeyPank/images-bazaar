@@ -11,7 +11,7 @@ function App() {
   const [images, setImages] = useState([]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <SearchImages addImages={setImages} />
       <DisplayImages images={images} />

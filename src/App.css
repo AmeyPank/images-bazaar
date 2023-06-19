@@ -1,9 +1,7 @@
-body {
-  background-image: linear-gradient(to top left, #ff9a9e, #fad0c4);
-}
 
 .app {
-  min-height: 100%;
+  background-color: #272727;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
