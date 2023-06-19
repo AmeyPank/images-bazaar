@@ -17,19 +17,18 @@ const SearchImages = ({ addImages }) => {
     getImages()
   }, [])
 
-
   function getImages() {
-    axios.get("https://api.unsplash.com/search/photos", {
-      params: {
-        client_id: process.env.REACT_APP_ACCESS_KEY,
-        query: searchTerm
-      }
-    })
-      .then(response => addImages(response.data.results))
-      .catch(error => console.log(error))
-
+    axios
+      .get('https://api.unsplash.com/search/photos', {
+        params: {
+          client_id: process.env.REACT_APP_ACCESS_KEY,
+          query: searchTerm,
+        },
+        mode: 'cors', // Set the CORS mode
+      })
+      .then((response) => addImages(response.data.results))
+      .catch((error) => console.log(error));
   }
-
   //   function getImages1(){
   //       fetch("https://api.unsplash.com/search/photos", {
   //         params: {
